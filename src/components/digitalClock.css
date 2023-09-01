@@ -1,0 +1,43 @@
+.DigitalClock {
+  position: relative;
+}
+
+.DigitalClock > .spinner {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.DigitalClock > .spinner > span {
+  opacity: 1 !important;
+}
+
+.DigitalClock > .clock_text_date_container.disabled {
+  opacity: 0.5;
+  filter: blur(2px);
+  user-select: none;
+}
+
+.clock-text {
+  display: flex;
+  justify-content: center;
+}
+
+.clock-text-hour,
+.clock-text-minutes {
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+.clock-text-ampm {
+  font-size: var(--tiny-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  margin-left: var(--mb-0-25);
+}
+.clock-date {
+  text-align: center;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
