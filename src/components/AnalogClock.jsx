@@ -26,7 +26,14 @@ const AnalogClock = () => {
     */
 
     // setIsTimeSpinnerOn(ss >= 180 + hoursAngle - 1);
-    setIsTimeSpinnerOn(ss >= hoursAngle);
+    let angleToStartSpinner = 180 - hoursAngle;
+
+    // If The hoursAngle > 180 We Will Calculate The Angle According To 360°
+    if (angleToStartSpinner < 0) {
+      angleToStartSpinner += 360;
+    }
+
+    setIsTimeSpinnerOn(ss >= angleToStartSpinner);
 
     setHour(`rotateZ(${hoursAngle}deg)`);
     setMinutes(`rotateZ(${mm}deg)`);
