@@ -25,12 +25,10 @@ function Alarm({ children }) {
       let date = new Date();
       let HH = date.getHours();
       let MM = date.getMinutes();
-      let SS = date.getSeconds();
       let day = date.getDate();
       let month = date.getMonth();
       let year = date.getFullYear();
       let ampm;
-      const timeSpinerStartsAt = (HH - 6) * 5;
 
       if (HH >= 12) {
         HH = HH - 12;

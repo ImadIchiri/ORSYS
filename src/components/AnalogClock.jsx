@@ -14,6 +14,7 @@ const AnalogClock = () => {
     let hh = date.getHours() * 30;
     let mm = date.getMinutes() * 6;
     let ss = date.getSeconds() * 6;
+
     let hoursAngle = hh + mm / 12;
 
     while (hoursAngle >= 360) {
@@ -21,7 +22,8 @@ const AnalogClock = () => {
     }
 
     /* 
-      180 Represent The Angle Between Hours And Seconds && hoursAngle is The Angle Of The Hours
+      180 Represents The Angle Between Hours And Seconds To Start The Spinner
+      && hoursAngle is The Angle Of The Hours
       -1 is for getting the exact Angle
     */
 
